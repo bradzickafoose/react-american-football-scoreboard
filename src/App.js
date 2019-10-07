@@ -9,7 +9,9 @@ function App() {
   const [scoreHome, setCountHome] = useState(31);
   const [scoreAway, setCountAway] = useState(28);
 
-  
+  function Handler (team, score) {
+    team === "Home" ? setCountHome(scoreHome + score) : setCountAway(scoreAway + score);
+  }
 
   return (
     <div className="container">
