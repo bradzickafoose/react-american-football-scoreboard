@@ -6,11 +6,11 @@ import BottomRow from "./BottomRow";
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 
-  const [scoreHome, setCountHome] = useState(31);
-  const [scoreAway, setCountAway] = useState(28);
+  const [scoreHome, setScoreHome] = useState(0);
+  const [scoreAway, setScoreAway] = useState(0);
 
-  function Handler (team, score) {
-    team === "Home" ? setCountHome(scoreHome + score) : setCountAway(scoreAway + score);
+  function Handler (team, points) {
+    team === "Home" ? setScoreHome(scoreHome + points) : setScoreAway(scoreAway + points);
   }
 
   return (
